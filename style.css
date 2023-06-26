@@ -26,6 +26,7 @@
 }
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -54,7 +55,7 @@ body * {
   line-height: 24px;
   margin-top: 8px;
 }
-#switch{
+#switch {
   position: relative;
   width: 64px;
   margin: 4px auto;
@@ -72,15 +73,15 @@ body * {
   transform: translateY(-50%);
   z-index: 1;
 }
-.light #switch button{
-   right: 0;
-   left: initial;
+.light #switch button {
+  right: 0;
+  left: initial;
 }
 #switch span {
   display: block;
   width: 64px;
   height: 24px;
-  background:var(--surface-color);
+  background: var(--surface-color);
   border: 1px solid var(--stroke-color);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -141,3 +142,14 @@ footer {
   text-align: center;
   font-size: 14px;
 }
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+
